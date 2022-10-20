@@ -17,7 +17,8 @@ import { MongoURI, Secret } from "../config/config.js";
 
 // Import Router
 import indexRouter from './routes/index.route.server.js';
-import secureRouter from './routes/secure.route.server.js';
+import contactsRouter from './routes/contacts.route.server.js';
+import authRouter from './routes/auth.route.server.js';
 
 // instantiate app-server
 const app = express();
@@ -47,7 +48,9 @@ app.use(session({
 
 // Use Routes
 app.use('/', indexRouter);
-app.use('/', secureRouter);
+app.use('/', contactsRouter);
+app.use('/',authRouter);
+
 
 // // run app
 // app.listen(3000);

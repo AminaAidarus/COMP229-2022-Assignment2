@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <input type="hidden" name="id" value="<%= contacts._id %>" >
+                <div class="form-group">
+                    <label for="nameTextField">Contact name</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter the Contact Name"
+                    name="name" 
+                    value="<%= contacts.name %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneField">Contact Phone Number</label>
+                    <input type="number" class="form-control"
+                    id="phoneField"
+                    placeholder="Enter the Contact Phone Number"
+                    name="phone" 
+                    value="<%= contacts.phone %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailTextField">Contact email address</label>
+                    <input type="text" class="form-control"
+                    id="emailTextField"
+                    placeholder="Enter the Contact's email address"
+                    name="email" 
+                    value="<%= contacts.email %>"
+                    required>
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/contact-list" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+                    <a href="/contact-delete/<%= contacts._id %>" class="btn btn-danger btn-sm">
+                        <i class="fas fa-trash-alt"></i> Delete</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
