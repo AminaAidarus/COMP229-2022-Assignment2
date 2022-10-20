@@ -1,0 +1,303 @@
+/*
+File Name: app.css
+Student name: Amina Aidarus
+Student Id: 301237959
+Date: 2022-10-07
+*/
+/* heading 1 style */
+h1{
+  background-color: #90C7E3;
+    
+/* Main section styling */
+}
+main {
+ text-align: center;
+ background-image: linear-gradient(to bottom, #FFFFFF, #90C7E3);
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ padding: 10px;
+ border-radius:15px;
+ margin-left: auto;
+ margin-right: auto;
+
+}
+/* Links styling */
+
+header a, main a {
+   display: inline-block;
+   background-color: #7b38d8;
+   border-radius: 10px;
+   border: 4px double #cccccc;
+   color: #eeeeee;
+   text-align: center;
+   font-size: 28px;
+   padding: 20px;
+   width: 130px;
+   transition: all 0.5s;
+   cursor: pointer;
+   margin: 5px;
+}
+#aboutMeLink {
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+/* Home, About, projects and services pages styles */
+.container {
+  border: 3px solid blue;
+  border-style:solid;
+ border-radius:15px;
+ box-shadow:5px 5px 5px 5px;
+  padding: 20px 40px 40px;
+  max-width: 750px; 
+  height: 320px;
+}
+.container__image {
+    width: 250px;
+    margin: 30px 30px 30px 0;
+    float: left;
+  }
+  .container__text {
+    display: inline;
+  }
+
+.missionSec {
+ padding: 5px;
+ clear: both;
+ width:60%;
+ border-style:solid;
+ border-radius:15px;
+ box-shadow:5px 5px 5px 5px;
+   margin-bottom: 20px;
+   margin-left: auto;
+   margin-right: auto;
+   vertical-align: top;
+   text-align: left;
+}
+.aboutPart{
+ color:darkblue;
+ padding: 5px;
+ clear: both;
+ width:60%;
+ border-style:solid;
+ border-radius:15px;
+ box-shadow:5px 5px 5px 5px;
+   margin-bottom: 20px;
+   margin-left: auto;
+   margin-right: auto;
+   vertical-align: top;
+   text-align: left;
+ width: 30%;
+}
+
+/* Contacts Page Styling */
+
+fieldset {
+   clear: both;
+ width:60%;
+ border-style:solid;
+ border-radius:15px;
+ box-shadow:5px 5px 5px 5px;
+   margin-bottom: 20px;
+   margin-left: auto;
+   margin-right: auto;
+   vertical-align: top;
+   text-align: left;
+ padding: 10px;
+}
+fieldset p {
+ clear:both;
+ padding-right: 0;
+}
+
+
+/* footer styling */
+
+
+footer {
+ width: 100%;
+ display: inline-block;
+ background: #333;
+ height: 50vh;
+ text-align: center;
+ font-size: 22px;
+ font-weight: 700;
+ text-decoration: underline;
+}
+
+.footer-section{
+ background: #666;
+ box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+ box-sizing: border-box;
+ width: 100%;
+ text-align: left;
+ font: bold 16px sans-serif;
+ padding: 55px 50px;
+}
+
+.footer-section .left,
+.footer-section .center,
+.footer-section .right{
+ display: inline-block;
+ vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-section .left{
+ width: 40%;
+}
+
+/* The company logo */
+
+.footer-section h3{
+ color:  #ffffff;
+ font: normal 36px 'Open Sans', cursive;
+ margin: 0;
+}
+
+.footer-section h3 span{
+ color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-section .footer-links{
+ color:  #ffffff;
+ margin: 20px 0 12px;
+ padding: 0;
+}
+
+.footer-section .footer-links a{
+ display:inline-block;
+ line-height: 1.8;
+ font-weight:400;
+ text-decoration: none;
+ color:  inherit;
+}
+
+.footer-section .footer-website-name{
+ color:  #222;
+ font-size: 14px;
+ font-weight: normal;
+ margin: 0;
+}
+
+/* Footer Center */
+
+.footer-section .center{
+ width: 35%;
+}
+
+.footer-section .center i{
+ background-color:  #33383b;
+ color: #ffffff;
+ font-size: 25px;
+ width: 38px;
+ height: 38px;
+ border-radius: 50%;
+ text-align: center;
+ line-height: 42px;
+ margin: 10px 15px;
+ vertical-align: middle;
+}
+
+.footer-section .center i.fa-envelope{
+ font-size: 17px;
+ line-height: 38px;
+}
+
+.footer-section .center p{
+ display: inline-block;
+ color: #ffffff;
+ font-weight:400;
+ vertical-align: middle;
+ margin:0;
+}
+
+.footer-section .center p span{
+ display:block;
+ font-weight: normal;
+ font-size:14px;
+ line-height:2;
+}
+
+.footer-section .center p a{
+ color:  lightseagreen;
+ text-decoration: none;;
+}
+
+.footer-section .footer-links a:before {
+ content: "|";
+ font-weight:300;
+ font-size: 20px;
+ left: 0;
+ color: #fff;
+ display: inline-block;
+ padding-right: 5px;
+}
+
+/* Footer Right */
+
+.footer-section .right{
+ width: 20%;
+}
+
+.footer-section .footer-portfolio{
+ line-height: 20px;
+ color:  #92999f;
+ font-size: 13px;
+ font-weight: normal;
+ margin: 0;
+}
+
+.footer-section .footer-portfolio span{
+ display: block;
+ color:  #ffffff;
+ font-size: 14px;
+ font-weight: bold;
+ margin-bottom: 20px;
+}
+
+.footer-section .footer-icons{
+ margin-top: 25px;
+}
+
+.footer-section .footer-icons a{
+ display: inline-block;
+ width: 35px;
+ height: 35px;
+ cursor: pointer;
+ background-color:  #33383b;
+ border-radius: 2px;
+
+ font-size: 20px;
+ color: #ffffff;
+ text-align: center;
+ line-height: 35px;
+
+ margin-right: 3px;
+ margin-bottom: 5px;
+}
+
+/* making footer responsive */
+
+@media (max-width: 880px) {
+
+ .footer-section{
+   font: bold 14px sans-serif;
+ }
+
+ .footer-section .left,
+ .footer-section .center,
+ .footer-section .right{
+   display: block;
+   width: 100%;
+   margin-bottom: 40px;
+   text-align: center;
+ }
+
+ .footer-section .center i{
+   margin-left: 0;
+ }
+
+}
