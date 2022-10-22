@@ -1,6 +1,6 @@
 // Secure controller 
 import contactsModel from '../models/contacts.js';
-
+import { UserDisplayName } from '../utils/index.js';
 
 export function DisplayContactsList(req, res, next){
     contactsModel.find(function(err, contactsCollection) {
@@ -9,12 +9,13 @@ export function DisplayContactsList(req, res, next){
             res.end(err);
         }
 
-        res.render('index', {title: 'Contacts List', page: 'contacts/list', contacts: contactsCollection});
+        res.render('index', {title: 'Contacts List', page: 'contacts/list', contacts: contactsCollection, displayName: UserDisplayName(req)});
     })
+
 }
 
 export function DisplayContactsAddPage(req, res, next){
-    res.render('index', { title: 'Add Contact', page: 'contacts/edit', contacts: {} });
+    res.render('index', { title: 'Add Contact', page: 'contacts/edit', contacts: {}, displayName: UserDisplayName(req)});
 }
 
 export function ProcessContactsAddPage(req, res, next){
@@ -33,6 +34,7 @@ export function ProcessContactsAddPage(req, res, next){
 
         res.redirect('/contact-list')
     } )
+
 }
 
 export function DisplayContactsEditPage(req, res, next){
@@ -44,8 +46,9 @@ export function DisplayContactsEditPage(req, res, next){
             res.end(err);
         }
 
-        res.render('index', { title: 'Edit Contact', page: 'contacts/update', contacts: Contact });
+       res.render('index', { title: 'Edit Contact', page: 'contacts/edit', contacts: Contact, displayName: UserDisplayName(req) });
     });    
+
 }
 
 export function ProcessContactsEditPage(req, res, next){

@@ -1,10 +1,11 @@
 //index Routes
 import { Router } from 'express';
 
-import { DisplayLoginPage} from '../controllers/auth.controller.server.js';
+import { DisplayLoginPage, ProcessLoginPage, ProcessLogoutPage} from '../controllers/auth.controller.server.js';
 
 const router = Router();
 
 router.get('/login', DisplayLoginPage);
-
+router.post('/login', ProcessLoginPage);
+router.get('/logout',ProcessLogoutPage);
 export default router;
