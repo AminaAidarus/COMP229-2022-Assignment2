@@ -1,22 +1,16 @@
 <h1> <%= title %> Page</h1>
 <br><br><br><br>
 <article>
-    <form>
-        <fieldset>
-            <p>
-            <label>Username: </p>
-            <p><input type="text" name="username" id="username"required="yes"placeholder="Enter your username"tabindex="1">
-            </label>
-            </p>
-            <p>
-            <label>Password: </p>
-           <p><input type="password" name="password" id="password"placeholder="Enter your password"tabindex="2">
-            </label>
-            </p>
-            <p>
-                <button id="loginButton" type="submit" class="btn btn-primary btn-lg">
-                    <i class="fas fa-sign-in-alt"></i> Login</button>
-            </p>
-        </fieldset>
-    </form>
+    <form method="POST" id="loginForm" novalidate>
+        
+            <input type="text" class="form-control" id="username" name="username"  required
+            value="" placeholder="Enter your username">
+         
+            <input type="password" class="form-control" id="password" name="password"  required
+            value="" placeholder="Enter your password">
+
+          <button id="loginButton" type="submit" class="btn btn-primary btn-lg">
+            <i class="fas fa-sign-in-alt"></i> Login</button>
+        </div>
+      </form>
 </article>

@@ -14,7 +14,7 @@ const router = Router();
 
 //add middleware to connect application
 
-router.get('/contact-list', DisplayContactsList);
+router.get('/contact-list', AuthGuard, DisplayContactsList);
 router.get('/contact-add', AuthGuard, DisplayContactsAddPage);
 router.post('/contact-add',AuthGuard, ProcessContactsAddPage);
 router.get('/contact-edit/:id',AuthGuard, DisplayContactsEditPage);

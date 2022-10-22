@@ -1,21 +1,22 @@
-// Secure controller 
+// Contacts controller 
 import contactsModel from '../models/contacts.js';
 import { UserDisplayName } from '../utils/index.js';
 
 export function DisplayContactsList(req, res, next){
-    contactsModel.find(function(err, contactsCollection) {
+    contactsModel.find({}, null, {sort: {name: 1}}, (err, contactsCollection) => {
         if(err){
             console.error(err);
             res.end(err);
         }
-
+        else {
         res.render('index', {title: 'Contacts List', page: 'contacts/list', contacts: contactsCollection, displayName: UserDisplayName(req)});
+        }
     })
 
 }
 
 export function DisplayContactsAddPage(req, res, next){
-    res.render('index', { title: 'Add Contact', page: 'contacts/edit', contacts: {}, displayName: UserDisplayName(req)});
+    res.render('index', { title: 'Add Contact', page: 'contacts/add', contacts: {}, displayName: UserDisplayName(req)});
 }
 
 export function ProcessContactsAddPage(req, res, next){
